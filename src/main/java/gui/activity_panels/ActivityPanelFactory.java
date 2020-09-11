@@ -33,6 +33,8 @@ public class ActivityPanelFactory {
                 return new RangedActivityPanel();
             case COOKING:
                 return new CookingActivityPanel();
+            case COMBAT:
+                return new CombatActivityPanel();
         }
         return null;
     }

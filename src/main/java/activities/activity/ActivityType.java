@@ -5,7 +5,7 @@ import org.osbot.rs07.api.ui.Skill;
 public enum ActivityType {
 
     AGILITY(Skill.AGILITY),
-    //COMBAT (Skill.ATTACK, Skill.STRENGTH, Skill.DEFENCE, Skill.HITPOINTS, Skill.RANGED, Skill.MAGIC),
+    COMBAT (Skill.ATTACK, Skill.STRENGTH, Skill.DEFENCE, Skill.HITPOINTS, Skill.RANGED, Skill.MAGIC),
     //CONSTRUCTION (Skill.CONSTRUCTION),
     COOKING(Skill.COOKING),
     CRAFTING(Skill.CRAFTING),
