@@ -40,7 +40,11 @@ public class WitchPotion extends QuestActivity {
     public WitchPotion() {
         super(Quest.WITCH_POTION);
     }
-
+    @Override
+    public void onStart() {
+        depositAllBanking.exchangeContext(getBot());
+        HettyDialogueCompleter.exchangeContext(getBot());
+    }
     @Override
     public void runActivity() throws InterruptedException {
         if (!getInventory().contains(ITEMS_NEEDED) && getInventory().getEmptySlotCount() < INVENTORY_SLOTS_REQUIRED) {

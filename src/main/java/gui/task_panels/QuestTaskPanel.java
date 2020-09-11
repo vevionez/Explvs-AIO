@@ -105,6 +105,8 @@ public class QuestTaskPanel extends TaskPanel {
                 return new QuestTask(new TheRestlessGhost(), (Quest) questSelector.getSelectedItem());
             case WITCH_POTION:
                 return new QuestTask(new WitchPotion(), (Quest) questSelector.getSelectedItem());
+            case GOBLIN_DIPLOMACY:
+                return new QuestTask(new GoblinDiplomacy(), (Quest) questSelector.getSelectedItem());
         }
         return null;
     }
