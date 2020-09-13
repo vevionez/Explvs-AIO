@@ -1,18 +1,15 @@
 package gui.task_panels;
 
 import activities.quests.*;
-import activities.skills.combat.Npc;
 import gui.styled_components.StyledJComboBox;
 import gui.styled_components.StyledJLabel;
 import gui.styled_components.StyledJPanel;
 import org.json.simple.JSONObject;
-import org.osbot.Re;
 import tasks.QuestTask;
 import tasks.Task;
 import tasks.TaskType;
 
 import javax.swing.*;
-import javax.swing.text.JTextComponent;
 import java.awt.*;
 
 public class QuestTaskPanel extends TaskPanel {
@@ -107,6 +104,8 @@ public class QuestTaskPanel extends TaskPanel {
                 return new QuestTask(new WitchPotion(), (Quest) questSelector.getSelectedItem());
             case GOBLIN_DIPLOMACY:
                 return new QuestTask(new GoblinDiplomacy(), (Quest) questSelector.getSelectedItem());
+            case DORICS_QUEST:
+                return new QuestTask(new DoricsQuest(), (Quest) questSelector.getSelectedItem());
         }
         return null;
     }

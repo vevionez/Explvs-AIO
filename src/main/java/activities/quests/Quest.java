@@ -6,10 +6,11 @@ public enum Quest {
 
 
     SHEEP_SHEARER("Sheep Shearer", 179, 21, null, null),
+    DORICS_QUEST("Doric's Quest", 31, 100, null, null),
     THE_RESTLESS_GHOST("The Restless Ghost", 107, 5, null, null),
     RUNE_MYSTERIES("Rune Mysteries", 63, 6, null, null),
     GOBLIN_DIPLOMACY("Goblin Diplomacy", 62, 6, null, new String[]{"1x Goblin mail", "1x Orange goblin mail", "1x Blue goblin mail"}),
-    WITCH_POTION("Witches Potion", 67, 3, new String[]{"Combat lvl high enough to kill giant rat."}, new String[]{"1x Rat's tail", "1x Burnt meat", "1x Eye of Newt", "1x Onion"}),
+    WITCH_POTION("Witches Potion", 67, 3, new String[]{"Combat lvl high enough to kill giant rat. 3GP To buy Eye of newt if not in inventory"}, new String[]{"1x Rat's tail", "1x Burnt meat", "1x Eye of Newt", "1x Onion"}),
     COOKS_ASSISTANT("Cooks Assistant", 29, 2, null, new String[]{"1x Pot of flour", "1x Bucket of milk", "1x Egg"}),
     ROMEO_AND_JULIET("Romeo & Juliet", 144, 100, null, null);
     //ABYSS ("Abyss Mini Quest", 492, 4);

@@ -123,8 +123,13 @@ public class RomeoAndJuliet extends QuestActivity {
                 if (getDialogues().inDialogue()) {
                     getDialogues().clickContinue();
                 }
+                log("Quest is complete");
+                isComplete = true;
                 break;
-
+            default:
+                log("Unknown progress config value: " + getProgress());
+                setFailed();
+                break;
         }
     }
 

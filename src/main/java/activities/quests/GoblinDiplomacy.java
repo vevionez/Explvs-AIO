@@ -3,9 +3,7 @@ package activities.quests;
 import activities.activity.Activity;
 import activities.banking.DepositAllBanking;
 import org.osbot.rs07.api.map.Area;
-import org.osbot.rs07.api.model.NPC;
 import org.osbot.rs07.api.ui.Tab;
-import util.Sleep;
 
 import java.util.stream.Stream;
 
@@ -78,15 +76,28 @@ public class GoblinDiplomacy extends QuestActivity {
                     break;
                 case 3:
                     if (hasRequiredItems()) {
-                        WartFaceDialogueCompleter.run();
+                        // Dealing with cutscene
+                        if (Tab.INVENTORY.isDisabled(bot)) {
+                            if (getDialogues().isPendingContinuation()) {
+                                getDialogues().clickContinue();
+                            }
+                        } else {
+                            WartFaceDialogueCompleter.run();
+                        }
                     } else {
                         getItemsNeeded();
                     }
                     break;
                 case 4:
                 case 5:
-                    WartFaceDialogueCompleter.run();
-                    // TODO: Deal with cutscene
+                    // Dealing with cutscene
+                    if (Tab.INVENTORY.isDisabled(bot)) {
+                        if (getDialogues().isPendingContinuation()) {
+                            getDialogues().clickContinue();
+                        }
+                    } else {
+                        WartFaceDialogueCompleter.run();
+                    }
                     break;
                 case 6:
                     log("Quest is complete");
